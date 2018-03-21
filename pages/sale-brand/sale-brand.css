@@ -1,0 +1,82 @@
+body{
+	background: #fff;
+}
+.sale-panel-status1{
+	width: 100%;
+}
+.sale-list-status1 ul{
+	margin: 0;
+	padding: 0;
+}
+.sale-list-status1 ul li{
+	list-style: none;
+	height: 80px;
+	/*background: blue;*/
+	padding: 0 10px;
+	border-bottom: 1px solid #f5f5f5;
+}
+.sale-list-status1 ul li:first-child{
+	border-top: 1px solid #f5f5f5;
+}
+.sale-left-status1{
+	height: 40px;
+	/*background: red;*/
+	text-align: center;
+	line-height: 40px;
+}
+.circular-status1{
+	width: 15px;
+	height: 15px;
+	background: #000;
+	border-radius: 50%;
+	display: inline-block;
+}
+.sale-center-status1{
+	height: 80px;
+	/*background: green;*/
+}
+.sale-title-status1{
+	font-size: 14px;
+	height: 40px;
+	/*background: #007DDB;*/
+	line-height: 40px;
+	text-align: left;
+	color: #9b9b9b;
+}
+.sale-price-status1{
+	height: 40px;
+	/*background: #007DDB;*/
+	line-height: 40px;
+	text-align: left;
+	color: #9b9b9b;
+}
+.sale-icon-status1{
+	color: #3988ac;
+	font-size: 14px;
+}
+.sale-amount-status1{
+	color: #4a4a4a;
+	font-size: 14px;
+}
+.sale-right-status1{
+	height: 80px;
+	/*background: yellow;*/
+}
+.empty-status1{
+	height: 40px;
+}
+.shop-amount-status1{
+	height: 40px;
+	/*background: #007DDB;*/
+	line-height: 40px;
+	text-align: left;
+}
+.shop-font-status1{
+	font-size: 14px;
+	color: #3887ac;
+	padding-right: 3px;
+}
+.shop-amount-number-status1{
+	font-size: 14px;
+	color: #4a4a4a;
+}

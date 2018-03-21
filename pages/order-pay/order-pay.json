@@ -1,0 +1,24 @@
+{
+    "pageConfig": {
+        "styles": {
+            "titleNView": {
+                "titleColor": "#fff",
+                "titleSize": "17px",
+                "backgroundColor": "#447EA4",
+                "progress": {
+                    "color": "#00FF00",
+                    "height": "2px"
+                },
+                "autoBackButton": true
+            }
+        },
+        "show": {
+            "aniShow": "none",
+            "duration": "100"
+        }
+    },
+    "request": [
+        "../../utils/mui/css/mui.picker.min.css",
+        "../../utils/mui/js/mui.picker.min.js"
+    ]
+}

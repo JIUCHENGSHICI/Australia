@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>登陆</title>
+
+		<script src="../../utils/origin/request.js" type="text/javascript" charset="utf-8"></script>
+
+	</head>
+
+	<body>
+		<div id="pageApp">
+			<div class="login-box">
+				<div class="mui-content">
+					<div class="mui-row">
+						<div class="mui-col-xs-12">
+
+							<div class="brief-form">
+								<div class="mui-row brief-form-item">
+									<div class="mui-col-xs-1 text-primary">
+										<span class="iconfont icon-yonghu"></span>
+									</div>
+									<div class="mui-col-xs-4 text-select">
+										<select name="" v-model='choice'>
+											<option :value="item.value" v-for='(item,index) in areaCode'>{{item.text}}</option>
+										</select>
+										<span class="iconfont icon-msnui-downmini login-select-icon"></span>
+									</div>
+									<div class="mui-col-xs-7">
+										<input type="number" v-model='phone' placeholder="手机号码" />
+									</div>
+								</div>
+								<div class="mui-row brief-form-item" v-if="!isLoginModelPwd">
+									<div class="mui-col-xs-1 text-primary">
+										<img src="../../assets/img/login/shut.png" class="lock" />
+									</div>
+									<div class="mui-col-xs-11">
+										<input type="password" v-model='passWord' autocomplete="on" placeholder="密码" />
+									</div>
+								</div>
+								<div class="mui-row brief-form-item" v-if="isLoginModelPwd">
+									<div class="mui-col-xs-1 text-primary">
+										<img src="../../assets/img/login/shut.png" class="lock" />
+									</div>
+									<div class="mui-col-xs-7">
+										<input type="number" v-model='code' placeholder="验证码" />
+									</div>
+									<div class="mui-col-xs-4 ">
+										<button type="button" @tap='obtain' :disabled='isGetCode' class="btn-w100 mui-btn mui-btn-gray mui-pull-right">{{gain}}{{timeCount}}{{retransmission}}</button>
+									</div>
+								</div>
+
+							</div>
+
+						</div>
+					</div>
+					<div class="mui-row">
+						<div class="mui-col-xs-12 get-pwd" style="font-size:14px;">
+							<span class="mui-pull-left text-muted" @tap='setLoginModel()'>
+								<span v-if='isLoginModelPwd'>密码登录</span>
+							<span v-if='!isLoginModelPwd'>验证码登录</span>
+							</span>
+							<span @tap='toGetPwd()' class="mui-pull-right text-muted" v-if="isLoginModelPwd">找回密码</span>
+						</div>
+					</div>
+					<div class="mui-row btn-list">
+						<div class="mui-col-xs-12">
+							<button v-if='!isLoginModelPwd' @tap="passWordLogin()" type="button" class="mui-btn mui-btn-block mui-btn-primary ">登录</button>
+							<button v-if='isLoginModelPwd' @tap="codeLogin()" type="button" class="mui-btn mui-btn-block mui-btn-primary ">登录</button>
+							<button @tap="toReg()" type="button" class="mui-btn mui-btn-block mui-btn-primary mui-btn-outlined">创建账户</button>
+
+							<div class="other">
+								<div class="mui-row">
+									<div class="mui-col-xs-4 other-4-one">
+										<div class="line"></div>
+									</div>
+									<div class="mui-col-xs-4 other-4-two">
+										其他方式登录
+									</div>
+									<div class="mui-col-xs-4 other-4-three">
+										<div class="line"></div>
+									</div>
+								</div>
+							</div>
+							<button @tap="wx()" type="button" class="mui-btn mui-btn-block mui-btn-primary mui-btn-outlined">
+								<i class="mui-icon mui-icon-weixin"></i>&nbsp;微信授权登陆
+							</button>
+						</div>
+					</div>
+
+				</div>
+			</div>
+
+		</div>
+
+	</body>
+
+</html>

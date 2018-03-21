@@ -1,0 +1,32 @@
+[
+    {
+        "title": "a",
+        "id": "1",
+        "info": "info1",
+        "num": 19,
+        "type": {
+            "text": "型号a",
+            "value": 1
+        }
+    },
+    {
+        "title": "b",
+        "id": "2",
+        "info": "info2",
+        "num": 19,
+        "type": {
+            "text": "型号a",
+            "value": 1
+        }
+    },
+    {
+        "title": "c",
+        "id": "3",
+        "info": "info3",
+        "num": 19,
+        "type": {
+            "text": "型号a",
+            "value": 1
+        }
+    }
+]

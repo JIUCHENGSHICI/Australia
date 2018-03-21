@@ -1,0 +1,34 @@
+.get-pwd {
+	padding: 0 20px;
+	width: 100%;
+}
+
+.panel-head {
+	margin: 20px 0;
+	color: #acacac;
+	font-size: 14px;
+}
+
+.info-7 {
+	height: 60px;
+	line-height: 60px;
+}
+
+.mui-btn-get-pwd:enabled:active {
+	color: #fff;
+	border-color: #2b7fa6;
+	font-size: 14px;
+	background: #2b7fa6;
+}
+
+.login-select {
+	position: relative;
+}
+
+.login-select-icon {
+	position: absolute;
+	right: 0;
+	top: 0;
+	font-size: 20px;
+	color: #5bb6c2;
+}

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>地区销售</title>
+		<script src="../../utils/origin/request.js" type="text/javascript" charset="utf-8"></script>
+
+	</head>
+
+	<body>
+
+		<div id="pageApp">
+			<div class="list">
+				<ul>
+					<!--one开始-->
+					<li v-for="(item,index) in regionList" class="item">
+
+						<div class="mui-row">
+							<div class="mui-col-xs-2 item-head">
+
+								<div class="item-head-info text-gray">{{item.name}}</div>
+
+							</div>
+							<div class="mui-col-xs-10 item-body">
+
+								<div class="mui-row">
+
+									<div class="mui-col-xs-6">
+										<div :id="'echarts_'+index" :key="'echaasdasdrts_'+index" v-echarts:chart='item' style="width: 100%;height:134px;margin-top: -18px"></div>
+									</div>
+									<div class="mui-col-xs-6">
+										<div style="padding-bottom: 20px;">
+
+											<p class="count-title">
+												<span class="icon">交易笔数</span>
+												<span class="count text-gray">{{item.pen}}</span>
+											</p>
+											<div class="count-speed">
+												<p class="mui-progressbar mui-progressbar-in" v-speed='item.pen' data-progress="0">
+													<span></span>
+												</p>
+											</div>
+										</div>
+										<div>
+
+											<p class="count-title">
+												<span class="icon">商品数</span>
+												<span class="count text-gray">{{item.shopNumber}}</span>
+											</p>
+											<div class="count-speed">
+												<p v-speed='item.shopNumber' class="mui-progressbar mui-progressbar-in cash-progressbar">
+													<span></span>
+												</p>
+											</div>
+										</div>
+
+									</div>
+
+								</div>
+
+							</div>
+						</div>
+
+					</li>
+					<!--one结束-->
+				</ul>
+			</div>
+		</div>
+
+	</body>
+
+</html>

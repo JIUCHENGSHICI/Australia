@@ -1,0 +1,33 @@
+{
+	"debug": true,
+	"pages": [
+		"pages/ajax/ajax"
+	],
+	"nav": [
+		{
+			"url": "pages/index/index",
+			"title": "首页",
+			"icon": "mui-icon-home"
+		},
+		{
+			"url": "pages/orderQuery/orderQuery",
+			"title": "订单",
+			"icon": "mui-icon-bars"
+		},
+		{
+			"url": "pages/system-set/system-set",
+			"title": "设置",
+			"icon": "mui-icon-gear"
+		}
+	],
+	"request": [
+		"../../utils/icon/iconfont.css",
+		"../../utils/font/css/font-awesome.min.css",
+		"../../utils/mui/css/mui.min.css",
+		"../../utils/origin/origin.css",
+		"../../app.css",
+		"../../utils/mui/js/mui.min.js",
+		"../../utils/vue/vue.min.js",
+		"../../utils/origin/origin.js"
+	]
+}

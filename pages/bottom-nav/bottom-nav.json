@@ -1,0 +1,12 @@
+{
+    "pageConfig": {
+        "styles": {
+            "bottom": "0",
+            "height": "50px"
+        },
+        "show": {
+            "aniShow": "slide-in-bottom",
+            "duration": "100"
+        }
+    }
+}

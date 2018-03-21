@@ -1,0 +1,63 @@
+/*销售的样式集合开始*/
+
+* {
+    color: #4A4A4A;
+}
+
+
+/*=====  */
+
+.list ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.item {
+    position: relative;
+    border: solid 1px #EBEBEB;
+    ;
+    margin-top: -1px;
+}
+
+.item.active {}
+
+.item.active .item-head-info {
+    background-color: #D2E0E7;
+}
+
+.item-head {}
+
+.item-head-info {
+    line-height: 134px;
+    text-align: center;
+    background-color: #F2F2F2;
+}
+
+.item-body {
+    padding: 10px;
+    background-color: #ffffff;
+}
+
+.count-title {
+    font-size: 18px;
+    margin: 0;
+}
+
+.count-title .icon {
+    color: #2B7FA6;
+    font-size: 0.6em;
+}
+
+.count-title .count {
+    font-size: 1.2em;
+}
+
+.mui-progressbar {
+    display: inline-block;
+    height: 10px;
+}
+
+.count-speed {
+    padding: 0 5px;
+}

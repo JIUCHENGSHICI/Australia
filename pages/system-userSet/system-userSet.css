@@ -1,0 +1,62 @@
+.userInfo {
+    width: 60%;
+}
+
+* {}
+
+
+/*系统功能里边的样式开始================================*/
+
+.mui-table-view-cell:after {
+    left: 0px;
+    background-color: #D8D8D8;
+}
+
+.mui-content>.mui-table-view:first-child {
+    margin-top: 0;
+}
+
+.mui-table-view-cell {
+    padding: 18px 15px;
+}
+
+.mui-table-view-cell>a:not(.mui-btn) {
+    margin: -18px -15px;
+}
+
+.mui-navigate-right:after,
+.mui-push-left:after,
+.mui-push-right:after {
+    color: #D8D8D8;
+}
+
+.mui-badge-danger {
+    background-color: #d0021b;
+}
+
+.list {
+    color: #4A4A4A;
+    font-size: 14px;
+}
+
+.list-left-icon {
+    margin-right: 10px;
+    color: #2B7FA6;
+}
+
+.list-right-blue {
+    color: #2B7FA6;
+}
+
+.fr-35 {
+    right: 35px;
+    position: absolute;
+    color: #9B9B9B;
+}
+
+.top-22 {
+    top: 22px;
+}
+
+
+/*系统功能里边的样式结束================================*/

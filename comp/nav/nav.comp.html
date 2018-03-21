@@ -1,0 +1,10 @@
+<div class="nav-comp">
+
+    <nav class="mui-bar mui-bar-tab">
+        <a :class="['mui-tab-item',{'mui-active':isActive(item)}]" @tap.stop='open(item)' href="#tabbar" v-for='(item,index) in items'>
+            <span class="mui-icon" :class="item.icon"></span>
+            <span class="mui-tab-label">{{item.title}}</span>
+        </a>
+    </nav>
+
+</div>

@@ -1,0 +1,21 @@
+{
+	"pageConfig": {
+		"styles": {
+			"titleNView": {
+				"titleColor": "#fff",
+				"titleSize": "17px",
+				"backgroundColor": "#447EA4",
+				"progress": {
+					"color": "#00FF00",
+					"height": "2px"
+				},
+				"autoBackButton": true
+			
+			}
+		},
+		"show": {
+			"aniShow": "slide-in-right",
+			"duration": "100"
+		}
+	}
+}

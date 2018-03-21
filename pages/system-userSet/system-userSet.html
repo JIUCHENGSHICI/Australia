@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<title>个人设置</title>
+	<script src="../../utils/origin/request.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>
+	<div id="pageApp">
+		<div class="mui-content">
+			<ul class="mui-table-view">
+				<li @tap="setName()" class="mui-table-view-cell list">昵称
+					<span class="fr list-right-blue userInfo one-line tr">{{userInfo.userName}}</span>
+				</li>
+				<li @tap="setEmail()" class="mui-table-view-cell list">电子邮件
+					<span class="fr list-right-blue userInfo one-line tr">{{userInfo.userEmail}}</span>
+				</li>
+				<li @tap="setPhone()" class="mui-table-view-cell list">电话号码
+					<span class="fr list-right-blue userInfo one-line tr">{{userInfo.userPhone}}</span>
+				</li>
+				<li class="mui-table-view-cell list" @tap="goSetPwd()">
+					<a class="mui-navigate-right">
+						<span class="fr-35 top-22">********</span>支付密码
+					</a>
+				</li>
+				<li class="mui-table-view-cell list" @tap="goWx()">
+					<a class="mui-navigate-right">
+						<span class="fr-35" v-if="wx.state">已绑定</span>
+						<span class="fr-35" v-if="!wx.state">未绑定</span> 绑定微信
+					</a>
+				</li>
+				<li class="mui-table-view-cell list" @tap="gologin()">
+					<a class="mui-navigate-right">
+						<span class="fr-35"></span>切换账号
+					</a>
+				</li>
+				<li class="mui-table-view-cell list" @tap="pwd()">
+					<a class="mui-navigate-right">
+						<span class="fr-35 top-22">********</span>登录密码
+					</a>
+				</li>
+			</ul>
+		</div>
+
+		<div class="fixed-btn-list">
+			<div class="mui-row">
+				<div class="mui-col-xs-12">
+					<div class="fixed-btn-item fixed-btn-primary" @tap='sign()'>退出登录</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</body>
+
+</html>

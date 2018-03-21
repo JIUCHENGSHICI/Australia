@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>添加新地址</title>
+		<script src="../../utils/origin/request.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+
+	<body>
+		<div id="pageApp">
+			<div class="new">
+				<div class="new-title new-name">姓名</div>
+				<input v-model="newAdd.people" type="text" class="mui-input-clear new-name-input" placeholder="">
+				<div class="new-title new-tel">联系电话</div>
+				<input v-model="newAdd.phone" type="number" class="mui-input-clear new-tel-input" placeholder="">
+				<div class="new-title new-address">送货地址</div>
+
+				<!--div版的粘贴-->
+				<!--<div class="address-box" @longtap="copy()">
+					请将地址信息粘贴到此处，系统将自动分类并显示于下方
+				</div>-->
+				<!--textarea版的粘贴-->
+				<!--<textarea v-model="newAdd.copy" id="copy" rows="5" class="copy-address" placeholder="请将地址信息粘贴到此处，系统将自动分类并显示于下方"></textarea>-->
+				<div class="mui-content-padded">
+					<div class="mui-row" @tap="setAddress()">
+						<div class="mui-col-xs-4 address-level tl">
+							<div class="left box">
+								省&nbsp;{{newAdd.address.province.text}}
+							</div>
+						</div>
+						<div class="mui-col-xs-4 address-level tc">
+							<div class="center box">
+								市&nbsp;{{newAdd.address.city.text}}
+							</div>
+						</div>
+						<div class="mui-col-xs-4 address-level tr">
+							<div class="right box">
+								区&nbsp;{{newAdd.address.area.text}}
+							</div>
+						</div>
+						<div id='cityResult3' class="ui-alert"></div>
+					</div>
+
+				</div>
+				<div class="mui-input-row feedback-text bottom-adress">
+					<textarea v-model="newAdd.info" id="textarea" rows="5" class="text-color" placeholder="请填写详细地址"></textarea>
+				</div>
+			</div>
+			<div class="fixed-btn-list">
+				<div class="mui-row">
+					<div class="mui-col-xs-12">
+						<div class="fixed-btn-item fixed-btn-primary" v-if="model==1" @tap='add()'>添加</div>
+						<div class="fixed-btn-item fixed-btn-primary" v-if="model==2" @tap='save()'>保存</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+
+</html>

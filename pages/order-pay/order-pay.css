@@ -1,0 +1,30 @@
+body {
+  background: #F7F7F7; }
+
+.order-goods-list {
+  background-color: #ffffff; }
+  .order-goods-list .order-goods-item {
+    padding: 10px;
+    border-bottom: solid #ddd 1px;
+    line-height: 25px;
+    font-size: 14px; }
+
+.order-pay-model .order-pay-item {
+  background-color: #ffffff;
+  padding: 10px;
+  border-bottom: solid #ddd 1px;
+  line-height: 25px;
+  font-size: 14px; }
+  .order-pay-model .order-pay-item input {
+    margin-right: 10px; }
+  .order-pay-model .order-pay-item.order-pay-item-1 {
+    margin: 10px 0; }
+
+.order-money {
+  background-color: #ffffff;
+  font-size: 14px;
+  padding: 10px;
+  line-height: 25px; }
+
+.checkbox-box {
+  width: 100%; }

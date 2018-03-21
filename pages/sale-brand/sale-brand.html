@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>品牌销售</title>
+		<script src="../../utils/origin/request.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div id="pageApp">
+			<div class="sale-panel-status1">
+				<div v-echarts='brandList' style="width: 100%;height:260px;margin-bottom: -20px;"></div>
+				<div class="sale-list-status1">
+					<ul>
+						<li v-for="(item,index) in brandList" @tap="goInfo(item,index)">
+							<div class="mui-row">
+								<div class="mui-col-xs-1 sale-left-status1">
+									<div class="circular-status1"></div>
+								</div>
+								<div class="mui-col-xs-5 sale-center-status1">
+									<div class="sale-title-status1 one-line">
+										{{item.title}}
+									</div>
+									<div class="sale-price-status1">
+										<div class="mui-row">
+											<div class="mui-col-xs-2">
+												<span class="sale-icon-status1">￥</span>
+											</div>
+											<div class="mui-col-xs-10 nowrap">
+												<span class="sale-amount-status1 text-gray">{{item.money}}</span>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="mui-col-xs-6 sale-right-status1">
+									<div class="empty-status1">
+									</div>
+									<div class="shop-amount-status1">
+										<div class="mui-row">
+											<div class="mui-col-xs-7 tr">
+												<span class="shop-font-status1">商品数</span>
+											</div>
+											<div class="mui-col-xs-5 nowrap">
+												<span class="shop-amount-number-status1 text-gray">
+												{{item.shopNumber}}
+											</span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+	</body>
+
+</html>

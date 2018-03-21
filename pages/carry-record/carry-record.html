@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<title>提现记录</title>
+	<script src="../../utils/origin/request.js" type="text/javascript" charset="utf-8"></script>
+</head>
+
+<body>
+	<div id="pageApp">
+		<div class="record">
+			<!--顶部开始-->
+			<div class="record-top">
+				<div class="mui-row">
+					<div class="mui-col-xs-4 record-start-data">
+						<input @tap="getTime('startTime')" v-model="startTime.text" type="text" class="mui-input-clear record-input" placeholder="">
+					</div>
+					<div class="mui-col-xs-1 record-line">
+						<div class="record-connect"></div>
+					</div>
+					<div class="mui-col-xs-4 record-end-data">
+						<input @tap="getTime('endTime')" v-model="endTime.text" type="text" class="mui-input-clear record-input" placeholder="">
+					</div>
+					<div class="mui-col-xs-3 record-search">
+						<div @tap="search()" class="record-search-box">
+							搜索
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--顶部结束-->
+			<ul>
+				<li v-for="(item,index) in recordList" v-if="item.isShow">
+					<div class="mui-row record-list">
+						<div class="mui-col-xs-3 record-info-left">
+							提现账户
+						</div>
+						<div class="mui-col-xs-9 record-info-right one-line tr">
+							<span class="record-user">{{item.account}}</span>
+						</div>
+						<div class="mui-col-xs-3 record-info-left">
+							提现时间
+						</div>
+						<div class="mui-col-xs-9 record-info-right one-line tr">
+							<span class="record-time">{{item.time.text}}</span>
+						</div>
+						<div class="mui-col-xs-3 record-info-left">
+							提现金额
+						</div>
+						<div class="mui-col-xs-9 record-info-right one-line tr">
+							<span class="record-money">￥{{item.money}}</span>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+</body>
+
+</html>

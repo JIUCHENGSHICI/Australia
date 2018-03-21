@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<title>列表</title>
+	<!--新闻列表  和  消息列表 集合-->
+	<script src="../../utils/origin/request.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>
+	<div id="pageApp">
+		<ul class="list">
+			<li v-for="(item,index) in list" class="list-item" @tap="goInfo(item,index)" :key="item.paper_id">
+				<div class="mui-row">
+					<div class="mui-col-xs-3 img ">
+						<img :src="$getUrl(item.head_img)" />
+					</div>
+					<div class="mui-col-xs-9 list-info-box">
+						<div class="title one-line text-gray">
+							{{item.paper_title}}
+						</div>
+						<div class="info three-line text-gray">
+							{{item.paper_info}}
+						</div>
+					</div>
+				</div>
+			</li>
+		</ul>
+	</div>
+</body>
+
+</html>

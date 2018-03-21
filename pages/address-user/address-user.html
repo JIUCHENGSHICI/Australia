@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<title>我的地址</title>
+	<script src="../../utils/origin/request.js" type="text/javascript" charset="utf-8"></script>
+</head>
+
+<body>
+	<div id="pageApp" class="pageApp">
+		<ul id="OA_task_2" class="mui-table-view">
+			<li class="mui-table-view-cell" v-for="(item,index) in addressList" :key="item.address_id">
+				<div class="mui-slider-right mui-disabled">
+					<a @tap="edit(item,index)" class="mui-btn mui-btn-edit mui-icon mui-icon-compose"></a>
+					<a @tap="del(item,index)" class="mui-btn mui-btn-del mui-icon mui-icon-trash"></a>
+				</div>
+				<div class="mui-slider-handle">
+					<div class="address">
+						<div class="mui-row">
+							<div class="mui-col-xs-6">
+								<div class="user-name">{{item.people}}</div>
+							</div>
+							<div class="mui-col-xs-6">
+								<div class="mui-pull-right">
+									{{item.phone}}
+								</div>
+							</div>
+						</div>
+						<div class="mui-row">
+							<div class="mui-col-xs-12">
+								<div class="one-line user-address">
+									<span>
+										{{item.address.province.text}}
+									</span>
+									<span>
+										{{item.address.city.text}}
+									</span>
+									<span>
+										{{item.address.area.text}}
+									</span>
+									<span>
+										- {{item.info}}
+									</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</li>
+		</ul>
+	</div>
+
+</body>
+
+</html>

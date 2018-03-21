@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>创建账户</title>
+		<script src="../../utils/origin/request.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+
+	<body>
+		<div id="pageApp">
+			<!--提现容器开始-->
+			<div class="record-show profit-left-content">
+				<!--账户余额开始-->
+				<div class="balance one-line">
+					账号类型
+				</div>
+				<div class="bank-select">
+					<select name="" v-model="choice">
+						<option value="" disabled>请选择类型</option>
+						<option v-for="(item,index) in profitInfo" :value="item.accountInfo">{{item.accountInfo}}</option>
+					</select>
+					<span class="iconfont icon-msnui-downmini bank-select-icon"></span>
+				</div>
+				<!--账户余额结束-->
+				<!--姓名开始-->
+				<div class="carry-name one-line">
+					姓名
+				</div>
+				<input v-model="profit.name" type="text" class="mui-input-clear balance-input" placeholder="请输入真实姓名">
+				<!--姓名结束-->
+				<!--银行账号开始-->
+				<div class="bank one-line">
+					账户
+				</div>
+				<!--下拉组件开始-->
+				<input v-model="profit.account" type="text" class="mui-input-clear balance-input" placeholder="请输入提现账户">
+				<!--下拉组件结束-->
+			</div>
+
+			<!--银行账号结束-->
+			<!--提现容器结束-->
+
+			<!--账户信息容器开始-->
+
+			<div class="fixed-btn-list">
+				<div class="mui-row">
+					<div class="mui-col-xs-12">
+						<div class="fixed-btn-item fixed-btn-primary" @tap='upLoad()'>提交</div>
+					</div>
+				</div>
+			</div>
+
+			<!--账户信息容器结束-->
+		</div>
+
+	</body>
+
+</html>

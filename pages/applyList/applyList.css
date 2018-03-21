@@ -1,0 +1,33 @@
+* {
+    vertical-align: middle !important;
+    color: #4A4A4A;
+}
+
+.apply-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 14px;
+}
+
+.apply-list-item {
+    padding: 10px;
+    border-bottom: solid 1px #D8D8D8;
+}
+
+.apply-list-item .apply-img {
+    display: block;
+}
+
+.apply-list-item .apply-img img {
+    width: 70px;
+    height: 70px;
+}
+
+.apply-btn-box {
+    line-height: 70px;
+}
+
+.apply-btn-box .mui-btn {
+    vertical-align: middle;
+}

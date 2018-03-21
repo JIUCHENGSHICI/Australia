@@ -1,0 +1,105 @@
+.record-top {
+	padding: 10px;
+	/*background: red;*/
+}
+
+input[type=text].record-input {
+	width: 100%;
+	border-radius: 0;
+	padding: 5px 5px;
+	color: #9B9B9B;
+}
+
+.record-start-data {
+	height: 50px;
+	/*background: #0062CC;*/
+	line-height: 50px;
+}
+
+.record-line {
+	height: 50px;
+	/*background: #009688;*/
+	line-height: 48px;
+}
+
+.record-connect {
+	width: 100%;
+	border: 2px solid #D8D8D8;
+	display: inline-block;
+}
+
+.record-end-data {
+	height: 50px;
+	/*background: #00F7DE;*/
+	line-height: 50px;
+}
+
+.record-search {
+	height: 50px;
+	/*background: #3887AC;*/
+	padding-top: 7.5px;
+}
+
+.record-search-box {
+	width: 50px;
+	height: 36px;
+	background: #77CEC3;
+	line-height: 36px;
+	text-align: center;
+	color: #fff;
+}
+
+
+/*下边的查出来的列表的样式*/
+
+.record ul {
+	margin: 0;
+	padding: 0;
+}
+
+.record ul li {
+	list-style: none;
+	padding: 10px;
+	/*padding-bottom: 1px;*/
+	/*background: #00F7DE;*/
+	border-bottom: 1px solid #D8D8D8;
+}
+
+
+/*左边的信息*/
+
+.record-info-left {
+	height: 30px;
+	font-size: 14px;
+	color: #4A4A4A;
+	line-height: 30px;
+}
+
+.record-info-right {
+	height: 30px;
+	line-height: 30px;
+}
+
+
+/*右边的账户*/
+
+.record-user {
+	font-size: 13px;
+	color: #9B9B9B;
+}
+
+
+/*右边的时间*/
+
+.record-time {
+	font-size: 13px;
+	color: #9B9B9B;
+}
+
+
+/*右边的金额*/
+
+.record-money {
+	font-size: 13px;
+	color: #3BAEAD;
+}

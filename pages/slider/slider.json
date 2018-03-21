@@ -1,0 +1,30 @@
+{
+	"pageConfig": {
+		"styles": {
+			"titleNView": {
+				"titleColor": "#fff",
+				"titleSize": "17px",
+				"backgroundColor": "#447EA4",
+				"progress": {
+					"color": "#00FF00",
+					"height": "2px"
+				},
+				"autoBackButton": true,
+				"buttons": [
+					{
+						"color": "#fff",
+						"text": "+",
+						"float": "right",
+						"fontSrc": "utils/mui/fonts/mui.ttf",
+						"fontSize": "16px",
+						"onclick": "goAdd"
+					}
+				]
+			}
+		},
+		"show": {
+			"aniShow": "slide-in-right",
+			"duration": "100"
+		}
+	}
+}

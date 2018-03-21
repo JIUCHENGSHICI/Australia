@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>找回密码</title>
+		<script src="../../utils/origin/request.js" type="text/javascript" charset="utf-8"></script>
+
+	</head>
+
+	<body>
+		<div id="pageApp" class="get-pwd">
+			<div class="panel panel-top">
+				<div class="panel-head">
+					修改密码需校验您的注册手机号，点击获取验证码，将发送短信至手机号码
+					<span id="">***********</span>
+				</div>
+				<!--组件2开始-->
+				<div class="panel-body panel-body-top-reg">
+					<!--手机号码开始-->
+					<div class="info-box info-box-status1">
+						<div class="mui-row">
+							<div class="mui-col-xs-1 info-1">
+								<span class="iconfont icon-yonghu tel-head-icon"></span>
+							</div>
+							<!--<div class="mui-col-xs-3 info-3">
+								<div class="tc">
+									<div class="tel-select text-select">
+										<select name="" v-model="choice">
+											<option v-for="(item,index) in areaCode" :value="item.value">{{item.text}}</option>
+										</select>
+									</div>
+								</div>
+							</div>-->
+							<div class="mui-col-xs-3 text-select info-3">
+								<select name="" v-model='choice'>
+									<option :value="item.value" v-for='(item,index) in areaCode'>{{item.text}}</option>
+								</select>
+								<span class="iconfont icon-msnui-downmini login-select-icon"></span>
+							</div>
+							<div class="mui-col-xs-8 info-8">
+								<input v-model="phone" type="number" class="mui-input-clear no-border" placeholder="手机号码">
+							</div>
+						</div>
+					</div>
+					<!--手机号码结束-->
+					<!--验证码开始-->
+					<div class="info-box">
+						<div class="mui-row">
+							<div class="mui-col-xs-7 info-7">
+								<input v-model="code" type="number" class="mui-input-clear no-border code" placeholder="验证码">
+							</div>
+							<div class="mui-col-xs-5 info-5">
+								<button @tap="getCode()" :disabled='isGetCode' type="button" class="mui-btn mui-btn-block mui-btn-obtain mui-btn-outlined">{{gain}}{{timeCount}}{{retransmission}}</button>
+							</div>
+						</div>
+					</div>
+					<!--验证码结束-->
+					<!--第一次密码开始-->
+					<div class="info-box info-box-status1">
+						<div class="mui-row">
+							<div class="mui-col-xs-1 info-1">
+								<img src="../../assets/img/login/open.png" class="lock" />
+							</div>
+							<div class="mui-col-xs-11 info-11">
+								<input v-model="passWord1" type="password" class="mui-input-clear no-border" placeholder="密码">
+							</div>
+						</div>
+					</div>
+					<!--第一次密码结束-->
+					<!--第2次密码开始-->
+					<div class="info-box info-box-status1">
+						<div class="mui-row">
+							<div class="mui-col-xs-1 info-1">
+								<img src="../../assets/img/login/shut.png" class="lock" />
+							</div>
+							<div class="mui-col-xs-11 info-11">
+								<input v-model="passWord2" type="password" class="mui-input-clear no-border" placeholder="确认密码">
+							</div>
+						</div>
+					</div>
+					<!--第2次密码结束-->
+					<div class="cube cube-30">
+						<div class="text-red text-center text-size-14">{{info}}</div>
+					</div>
+					<button @tap="determine()" type="button" class="mui-btn mui-btn-block mui-btn-primary mui-btn-get-pwd">确认</button>
+				</div>
+				<!--组件2结束-->
+			</div>
+		</div>
+
+	</body>
+
+</html>

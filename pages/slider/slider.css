@@ -1,0 +1,122 @@
+/*地址的样式======================================================================*/
+
+* {
+	color: #4A4A4A;
+}
+
+.address {
+	font-size: 13px;
+}
+
+.address .mui-row {
+	padding: 3px 0;
+}
+
+.user-name {
+	font-size: 15px;
+	font-weight: bold;
+}
+
+.mui-table-view-cell:after {
+	left: 0px;
+}
+
+.mui-table-view:before {
+	background-color: transparent;
+}
+
+.mui-table-view:after {
+	background-color: transparent;
+}
+
+.mui-table-view-cell:last-child:after,
+.mui-table-view-cell:last-child:before {
+	height: 1px;
+}
+
+
+/*收藏的样式=======================================================================*/
+
+/*.mui-table-view-cell {
+	padding: 0;
+}*/
+
+
+/*改变ul的样式*/
+
+.collect-list {
+	margin: 0;
+	padding: 0;
+}
+
+.collect-list li {
+	list-style: none;
+}
+
+
+/*左边样式*/
+
+.collect-left {
+	text-align: center;
+	padding: 10px 0;
+}
+
+
+/*左侧的图片的容器的样式*/
+
+.collect-head {
+	width: 70px;
+	height: 70px;
+	display: inline-block;
+}
+
+.collect-head img {
+	width: 100%;
+}
+
+
+/*右边样式*/
+
+.collect-right {
+	padding: 10px 0;
+}
+
+
+/*右侧的标题*/
+
+.collect-title {
+	color: #4a4a4a;
+	font-size: 14px;
+	text-align: left;
+	padding-left: 5px;
+	padding-top: 2px;
+}
+
+
+/*右侧的详情*/
+
+.collect-info {
+	font-size: 13px;
+	text-align: left;
+	padding-left: 5px;
+	padding-right: 5px;
+	color: #b1b1b1;
+	line-height: 25px;
+}
+
+.mui-table-view-cell:after {
+	left: 0px;
+}
+
+.mui-table-view:before {
+	background-color: transparent;
+}
+
+.mui-table-view:after {
+	background-color: transparent;
+}
+
+.mui-table-view-cell:last-child:after,
+.mui-table-view-cell:last-child:before {
+	height: 1px;
+}

@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="zh" class="no-js">
+	<script>
+		load();
+		function load() {
+			document.getElementsByTagName('html')[0].style.opacity = '0';
+		}
+	</script>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>首页</title>
+		<link rel="stylesheet" type="text/css" href="../../utils/mui/css/mui.min.css" />
+		<link rel="stylesheet" type="text/css" href="../../utils/icon/iconfont.css" />
+		<link rel="stylesheet" type="text/css" href="../../utils/font/css/font-awesome.min.css" />
+		<link rel="stylesheet" type="text/css" href="../../utils/origin/origin.css" />
+		<link rel="stylesheet" type="text/css" href="../../app.css" />
+		<link rel="stylesheet" type="text/css" href="index.css" />
+	</head>
+
+	<body>
+		<div id="pageApp">
+
+			<div class="head">
+				<!--顶部开始-->
+				<div class="nav">
+					<!--三个图片开始-->
+					<div class="head-img-box">
+						<div class="mui-row">
+							<div @tap="openNav()" class="mui-col-xs-4 img-box switch-box">
+								<!-- <img src="../../assets/img/index/index-switch.png" /> -->
+							</div>
+							<div class="mui-col-xs-4 img-box logo-box">
+								<img src="../../assets/img/index/index-logo.png" />
+							</div>
+							<div @tap="showPage('msg-list/msg-list')" class="mui-col-xs-4 img-box email-box tr">
+								<img src="../../assets/img/index/index-email.png" />
+								<span class="email-message"></span>
+							</div>
+						</div>
+					</div>
+					<!--三个图片结束-->
+					<!--下拉组件开始-->
+					<div class="tc">
+						<div class="index-select">
+							<select name="" v-model="choice">
+								<option value="">销售金额</option>
+								<option v-for="(item,index) in areaCode" :value="item.value">{{item.text}}</option>
+							</select>
+						</div>
+					</div>
+					<!--下拉组件结束-->
+				</div>
+
+				<div class="mui-row">
+
+					<div class="mui-col-xs-12">
+						<div class="profit-box profit-lg">
+							<div class="profit-title">
+								今日
+							</div>
+
+							<div class="profit-money">
+								<span class="text-yellow">
+								<span class="text-sm">￥</span>{{toDay.money}}
+								</span>
+							</div>
+
+							<span :class="['ratio-box ratio-lg',{'ratio-loss':toDay.isLoss}]">
+							<div class="ratio-state"></div>
+							<div class="ratio-val">{{toDay.val}}%</div>
+						</span>
+						</div>
+					</div>
+
+				</div>
+
+				<div class="mui-row text-center" style="position: relative">
+
+					<div class="mui-col-xs-6">
+						<div class="profit-box">
+							<div class="profit-title">
+								本周
+							</div>
+							<div class="profit-money">
+								<span class="text-yellow">
+								￥{{toDay.money}}
+							</span>
+							</div>
+							<span :class="['ratio-box',{'ratio-loss':week.isLoss}]">
+							<div class="ratio-state"></div>
+							<div class="ratio-val">{{week.val}}%</div>
+						</span>
+						</div>
+
+					</div>
+
+					<div class="mui-col-xs-6">
+
+						<span class="cube-align-middle" style="height: 60%"></span>
+
+						<div class="profit-box">
+							<div class="profit-title">
+								本月
+							</div>
+							<div class="profit-money">
+
+								<span class="text-yellow">
+								￥{{toDay.money}}
+							</span>
+
+							</div>
+
+							<span :class="['ratio-box',{'ratio-loss':month.isLoss}]">
+							<div class="ratio-state"></div>
+							<div class="ratio-val">{{month.val}}%</div>
+						</span>
+
+						</div>
+
+					</div>
+				</div>
+
+			</div>
+
+			<!--body开始-->
+			<div class="panel" id="panel">
+				<!--head顶部开始-->
+				<div class="arc-head" @tap="goNewmessage(newMsgListText)">
+					<div class="arc one-line">
+						<img src="../../assets/img/index/ic_news.png" />
+						<span class="a-line text-gray">
+						{{newMsgListText.text}}
+					</span>
+					</div>
+				</div>
+				<!--head顶部结束-->
+				<!--body开始-->
+				<div class="body">
+					<!--月度销售开始-->
+					<div class="report month-report" @tap="showPage('sale-month/sale-month')">
+						<div class="report-title">
+							月度销售
+							<span class="iconfont icon-youjiantou-01"></span>
+						</div>
+						<div v-echarts:month='monthSale' style="width: 100%;height:260px;margin-top: -40px;margin-bottom: -40px;"></div>
+					</div>
+					<!--月度销售结束-->
+					<!--月度销售开始-->
+					<div class="report" @tap="showPage('sale-brand/sale-brand')">
+						<div class="report-title">
+							品牌销售
+							<span class="iconfont icon-youjiantou-01"></span>
+						</div>
+						<div v-echarts:brand='brandSale' style="width: 100%;height:260px;margin-bottom: -30px;"></div>
+					</div>
+					<!--月度销售结束-->
+					<!--地区销售开始-->
+					<div class="report region-report" @tap="showPage('sale-region/sale-region')">
+						<div class="report-title">
+							地区销售
+							<span class="iconfont icon-youjiantou-01"></span>
+						</div>
+						<div class="mui-row">
+
+							<div class="mui-col-xs-4 tc one-line" v-for='(item,index) in regional'>
+								<div :id='"echarts_region_"+index' :key='"echarts_region_"+index' v-echarts:region='item' style="width: 100%;height:260px;margin-top:-50px;margin-bottom: -70px;"></div>
+								<span class="region-money">￥{{item.money}}</span>
+							</div>
+
+						</div>
+					</div>
+					<!--地区销售结束-->
+					<!--销售返利开始-->
+					<div class="report rebate-report" @tap="showPage('sale-rebate/sale-rebate')">
+						<div class="report-title">
+							销售返利
+							<span class="iconfont icon-youjiantou-01"></span>
+						</div>
+						<div class="rebate-data tc one-line">
+							<span class="gray">￥</span>
+							<span class="rebate-money">{{rebateMoney}}</span>
+							<div class="rebate-month">
+								{{rebate.month}}月
+							</div>
+						</div>
+					</div>
+					<!--销售返利结束-->
+					<!--新品推荐开始-->
+					<!-- @tap="goNewgoods()" -->
+					<div class="report product-report" @tap="showPage('msg-list/msg-list')">
+						<div class="report-title">
+							新品推荐
+							<span class="iconfont icon-youjiantou-01"></span>
+						</div>
+						<div class="product-pos">
+							<div class="mui-scroll-wrapper" style="height: 100px;">
+								<div class="mui-scroll">
+									<ul class="product-list text-center">
+										<li class="product-item" v-for='(item,index) in newArrival'>
+											<img class="img" src="../../assets/img/index/index1.png" />
+											<div class="">{{item.title}}</div>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!--新品推荐结束-->
+				</div>
+				<!--body结束-->
+			</div>
+			<!--body结束-->
+			<nav-comp></nav-comp>
+		</div>
+		<script src="../../utils/mui/js/mui.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../utils/vue/vue.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../utils/jquery/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../utils/echarts/echarts.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../utils/origin/origin.js" type="text/javascript" charset="utf-8"></script>
+		<script src="index.js" type="text/javascript" charset="utf-8"></script>
+
+	</body>
+
+</html>

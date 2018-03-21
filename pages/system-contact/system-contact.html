@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>联系我们</title>
+		<script src="../../utils/origin/request.js" type="text/javascript" charset="utf-8"></script>
+
+	</head>
+
+	<body>
+		<div id="pageApp">
+			<div id="systemContact">
+				<div class="contact">
+					<div class="feedback">问题反馈</div>
+					<div class="mui-input-row feedback-text">
+						<textarea id="textarea" rows="8" v-model="msg" class="text-color" placeholder="请输入您的意见或建议"></textarea>
+						<div class="tr text-right ">
+							<span :class="[{'text-red':isCountMax}]">
+							{{dataCount}}
+						</span>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div id="delete" class="mui-popover mui-popover-action mui-popover-bottom">
+				<ul class="mui-table-view">
+					<li class="mui-table-view-cell contact-tel">
+						<a :href="'tel:' + phone">{{phone}}</a>
+					</li>
+				</ul>
+				<ul class="mui-table-view">
+					<li class="mui-table-view-cell contact-cancel">
+						<a href="#delete">取&nbsp;消</a>
+					</li>
+				</ul>
+			</div>
+
+			<div class="fixed-btn-list">
+				<div class="mui-row">
+					<div class="mui-col-xs-12">
+						<div class="fixed-btn-item fixed-btn-primary" @tap='post()'>提交</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+
+</html>

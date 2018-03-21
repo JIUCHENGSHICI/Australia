@@ -1,0 +1,29 @@
+#pageApp {
+	margin: 0;
+	padding: 0;
+}
+
+.success {
+	width: 100%;
+	text-align: center;
+	padding: 120px 0;
+}
+
+.icon-chenggong1 {
+	font-size: 150px;
+	color: #09bb07;
+	vertical-align: middle;
+}
+
+.success-btn {
+	text-align: center;
+}
+
+.padding-left-right-10 {
+	padding-left: 30px;
+	padding-right: 30px;
+}
+
+.mui-btn-primary {
+	/*border-image: linear-gradient( 90deg, red, yellow) 30 30;*/
+}

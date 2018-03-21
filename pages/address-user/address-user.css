@@ -1,0 +1,30 @@
+* {
+	color: #4A4A4A;
+}
+
+.address {
+	font-size: 13px;
+}
+
+.address .mui-row {
+	padding: 3px 0;
+}
+
+.user-name {
+	font-size: 15px;
+	font-weight: bold;
+}
+
+.mui-table-view-cell:after {
+	left: 0px;
+}
+
+.mui-table-view:before {
+    background-color: transparent;
+}
+.mui-table-view:after {
+    background-color: transparent;
+}
+.mui-table-view-cell:last-child:after, .mui-table-view-cell:last-child:before {
+    height: 1px;
+}

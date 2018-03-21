@@ -1,0 +1,54 @@
+/*设置启动页面板的背景图片的样式 设置绝对定位*/
+
+#pageApp {
+	/*padding-bottom: 0;
+	margin-bottom: 0;*/
+}
+
+.home-panel {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	background-image: url(../../assets/img/all/home-bc.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+
+/*设置顶部logo的外边容器的样式*/
+
+.home-head {
+	position: absolute;
+	top: 110px;
+	padding: 0 40px;
+	width: 100%;
+	text-align: center;
+}
+
+
+/*设置顶部logo的图片的样式*/
+
+.home-head img {
+	width: 100%;
+}
+
+
+/*设置底部body的总样式,设置相对定位*/
+
+
+/*按钮active的时候*/
+
+.mui-btn:enabled:active {
+	color: #42b1b0;
+	background-color: #fff;
+	opacity: 1;
+}
+
+.login-mode {
+	width: 100%;
+	bottom: 20px;
+	position: absolute;
+	padding: 0 20px;
+}

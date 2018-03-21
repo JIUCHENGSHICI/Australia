@@ -1,0 +1,97 @@
+.apply {
+    margin-top: 20px;
+    padding: 0 20px;
+    font-size: 14px;
+}
+
+.apply-reason-left {
+    text-align: center;
+    line-height: 50px;
+    color: #4A4A4A;
+    margin-bottom: 10px;
+}
+
+.apply-detail-left {
+    text-align: center;
+    line-height: 20px;
+    color: #4A4A4A;
+}
+
+.apply-reason-right {
+    text-align: center;
+    line-height: 50px;
+    margin-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 15px;
+}
+
+.apply-detail-right {
+    text-align: center;
+    color: #BFBFBF;
+    padding-left: 10px;
+    padding-right: 15px;
+}
+
+
+/*下拉列表的样式开始*/
+
+.charge-select {
+    width: 100%;
+    height: 35px;
+    position: relative;
+    /*background: transparent;*/
+    display: inline-block;
+    color: #fff;
+    font-size: 14px;
+    border: 0.8px solid #BFBFBF;
+    line-height: 32px;
+}
+
+textarea {
+    border-radius: 0;
+    padding: 5px;
+}
+
+.charge-select-icon {
+    position: absolute;
+    top: 0;
+    right: 5px;
+    color: #2B7FA6;
+}
+
+.charge-select select {
+    /*border: none;*/
+    outline: none;
+    width: 100%;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: transparent;
+    padding: 0;
+    padding-left: 5px;
+    color: #AAA6A2;
+}
+
+
+/*下拉列表的样式结束*/
+
+
+/*上传的图片的样式*/
+
+.apply-4 {
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.apply-img {
+    height: 80px;
+    width: 80px;
+    /*background: red;*/
+    text-align: center;
+}
+
+.apply-img img {
+    max-width: 100%;
+    height: 80px;
+    width: 80px;
+}

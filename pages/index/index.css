@@ -1,0 +1,394 @@
+body {
+	padding: 0;
+	margin: 0;
+}
+
+
+/*顶部的头部背景图设置*/
+
+/*#pageApp {
+	font-size: 14px;
+}*/
+
+.panel {
+	/* border: 1px solid transparent; */
+}
+
+
+/*设置邮箱的右上角的小圆点*/
+
+.email-box {
+	position: relative;
+}
+
+.email-message {
+	background-color: #e4321f;
+	position: absolute;
+	color: #fff;
+	width: 8px;
+	height: 8px;
+	right: -2px;
+	top: -2px;
+	border-radius: 50%;
+}
+
+
+/*顶部三个div的样式设计结束*/
+
+
+/*下拉列表的样式开始*/
+
+.index-select {
+	width: 80px;
+	height: 40px;
+	border-bottom: 1px solid #fff;
+	position: relative;
+	background: transparent;
+	display: inline-block;
+	color: #fff;
+	font-size: 14px;
+}
+
+.index-select select {
+	border: none;
+	outline: none;
+	width: 100%;
+	height: 40px;
+	appearance: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	background: transparent;
+	padding: 0;
+	padding-left: 2px;
+}
+
+.index-select select option {
+	background: #5eadb9;
+}
+
+.index-select:after {
+	content: "";
+	width: 14px;
+	height: 8px;
+	background: url(../../assets/img/all/select.png);
+	background-size: cover;
+	position: absolute;
+	right: 0px;
+	top: 40%;
+	pointer-events: none;
+}
+
+
+/*下拉列表的样式结束*/
+
+
+/*今日   开始*/
+
+.today {
+	margin-top: 20px;
+	padding: 0 20px;
+}
+
+.today-title {
+	color: #fff;
+	font-size: 14px;
+}
+
+.today-info {
+	margin-top: 10px;
+}
+
+
+/*今日   结束*/
+
+
+/*钱 开始*/
+
+.today-info-icon {
+	display: inline-block;
+	color: #f2e485;
+	font-size: 20px;
+}
+
+.today-info-money {
+	display: inline-block;
+	color: #f2e485;
+	font-size: 40px;
+}
+
+.today-img-box {
+	display: inline-block;
+}
+
+.today-img-box img {
+	width: 50%;
+}
+
+.today-rate {
+	display: inline-block;
+	color: #fff;
+	font-size: 20px;
+}
+
+
+/*钱结束*/
+
+.ratio-box {
+	font-size: 12px;
+	display: inline-block;
+	color: #fff;
+}
+
+.ratio-box * {
+	display: inline-block;
+}
+
+.ratio-box.ratio-loss {
+	color: #d98881;
+}
+
+.ratio-state {
+	width: 11px;
+	height: 11px;
+	background-image: url(../../assets/img/index/index-rise.png);
+	background-size: cover;
+	background-position: center center;
+}
+
+.ratio-box.ratio-loss .ratio-state {
+	background-image: url(../../assets/img/index/index-drop.png);
+}
+
+.ratio-val {
+	padding-left: 5px;
+}
+
+.ratio-lg {
+	font-size: 20px;
+}
+
+
+/*头部的底部开始*/
+
+.statistics {
+	position: absolute;
+	width: 100%;
+	height: 20vh;
+	bottom: 0px;
+	/*background: yellow;*/
+	padding-top: 4vh;
+	text-align: center;
+}
+
+.statistics-left {
+	border-right: 1px solid #fff;
+}
+
+
+/*index-body 开始*/
+
+.index-body {
+	/*padding: 0 10px;*/
+	margin-top: 10px;
+}
+
+
+/*index-body  结束*/
+
+.index-body-top {
+	width: 100%;
+	height: 60px;
+	padding: 0 10px;
+}
+
+.arc-head {
+	padding: 0 10px;
+	white-space: nowrap;
+	overflow: hidden;
+	/*text-align: ;*/
+	text-overflow: ellipsis;
+}
+
+.arc {
+	background-image: url(../../assets/img/index/index-body-top2.png);
+	background-size: 100%;
+	background-position: center center;
+	background-repeat: no-repeat;
+	padding: 20px 7px;
+	padding-right: 30px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.arc img {
+	width: 12%;
+	vertical-align: middle;
+	display: inline;
+}
+
+.arc span {
+	display: inline-block;
+	vertical-align: middle;
+	overflow: hidden;
+	max-width: 90%;
+}
+
+
+/*index-body 结束*/
+
+
+/*报表销售开始*/
+
+.report {
+	/*margin-top: 20px;*/
+	border-bottom: 1px solid #e5e5e5;
+	padding: 30px 0;
+}
+
+.month-report {
+	padding-top: 10px;
+}
+
+.report-title {
+	width: 100%;
+	height: 40px;
+	/*background: red;*/
+	text-align: center;
+	line-height: 40px;
+	font-size: 18px;
+	color: #999999;
+}
+
+
+/*地区报表单独设置一个底内边距*/
+
+.region-report {
+	padding-bottom: 40px;
+}
+
+.region-money {
+	color: #4A4A4A;
+	font-size: 20px;
+}
+
+
+/*返利报表*/
+
+.rebate-report {
+	padding-bottom: 40px;
+}
+
+.rebate-money {
+	font-size: 30px;
+	color: #54a5ba;
+}
+
+.rebate-data {
+	padding-top: 20px;
+}
+
+.rebate-month {
+	width: 40px;
+	height: 25px;
+	line-height: 25px;
+	border: 1px solid #999999;
+	border-radius: 5px;
+	display: inline-block;
+	margin-left: 5px;
+	color: #999999;
+}
+
+
+/*新品推荐*/
+
+.product-report {
+	border-bottom: none;
+	/*padding-bottom: 30px;*/
+	position: relative;
+}
+
+.product-pos {
+	position: relative;
+	height: 130px;
+}
+
+.product-list {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	white-space: nowrap;
+}
+
+.product-list .product-item {
+	display: inline-block;
+	margin: 0 5px;
+}
+
+.product-list .product-item .img {
+	width: 70px;
+	height: 70px;
+}
+
+.mui-scroll {
+	width: auto;
+}
+
+
+/*报表销售结束*/
+
+
+/* =========================================== */
+
+
+/*顶部三个div的样式设计开始*/
+
+.img-box {}
+
+.img-box img {
+	width: 20%;
+}
+
+.logo-box img {
+	width: 100%;
+}
+
+
+/* =========================================== */
+
+.head {
+	padding: 20px 10px;
+	color: #fff;
+	background-image: url(../../assets/img/index/index-head-bc.jpg);
+	background-size: cover;
+	background-position: 0 0;
+	background-repeat: no-repeat;
+	padding-top: 35px;
+}
+
+.profit-box {
+	padding: 10px 0;
+	white-space: nowrap;
+}
+
+.profit-box.profit-lg {
+	padding: 50px 10px;
+}
+
+.profit-box.profit-lg .profit-money {
+	font-size: 40px;
+	line-height: 1;
+	display: inline-block;
+}
+
+.cube-align-middle {
+	position: absolute;
+	display: inline-block;
+	top: 50%;
+	left: 0;
+	transform: translateY(-50%);
+	height: 100%;
+	background-color: #ffffff;
+	width: 1px;
+	/* margin-left: -1px; */
+}

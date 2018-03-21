@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>设置</title>
+		<script src="../../utils/origin/request.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+
+	<body>
+		<div id="pageApp">
+			<div class="mui-content">
+				<ul class="mui-table-view">
+					<li class="mui-table-view-cell list" @tap="goSet">
+						<a class="mui-navigate-right">
+							<div class="icon-box">
+								<span class="iconfont icon-shezhi1 list-left-icon"></span>
+							</div>
+							个人设置
+						</a>
+					</li>
+					<li class="mui-table-view-cell list" @tap="goCollect">
+						<a class="mui-navigate-right">
+							<div class="icon-box">
+								<span class="iconfont icon-921caidan_hezi list-left-icon"></span>
+							</div>
+							我的收藏
+						</a>
+					</li>
+					<li class="mui-table-view-cell list" @tap="goMessage">
+						<a class="mui-navigate-right">
+							<div class="icon-box">
+								<span class="iconfont icon-youxiangzhaohui list-left-icon"></span>
+							</div>
+							<span class="mui-badge mui-badge-danger">{{set.msgAmount}}</span> 我的消息
+						</a>
+					</li>
+					<li class="mui-table-view-cell list" @tap="goAddress">
+						<a class="mui-navigate-right">
+							<div class="icon-box">
+								<span class="iconfont icon-fq_zhibaoshu list-left-icon"></span>
+							</div>
+							我的地址
+						</a>
+					</li>
+					<li class="mui-table-view-cell list" @tap="goContact">
+						<a class="mui-navigate-right">
+							<div class="icon-box">
+								<span class="iconfont  icon-lianxiwomen list-left-icon"></span>
+							</div>
+							联系我们
+						</a>
+					</li>
+					<li class="mui-table-view-cell list" @tap="goCharge()">
+						<a class="mui-navigate-right">
+							<div class="icon-box">
+								<span class="iconfont icon-qianbao list-left-icon"></span>
+							</div>
+							充值
+						</a>
+					</li>
+					<li class="mui-table-view-cell list" @tap="goAccount">
+						<div class="icon-box">
+							<span class="iconfont icon-yonghu4 list-left-icon"></span>
+						</div>
+						我的账户
+						<span class="fr list-right-blue dynamic tr one-line">￥{{set.userMoney}}</span>
+					</li>
+					<li class="mui-table-view-cell list" @tap="goTransaction">
+						<div class="icon-box">
+							<span class="iconfont icon-yanzhengma list-left-icon"></span>
+						</div>
+						小额免交易密码验证
+						<span class="fr dynamic tr one-line">￥{{set.passWordMoney}}</span>
+					</li>
+				</ul>
+			</div>
+			<nav-comp></nav-comp>
+		</div>
+
+	</body>
+
+</html>

@@ -1,0 +1,11 @@
+.mui-bar {
+	background: #fff;
+}
+
+
+/*把选中的颜色换成主题色*/
+
+.mui-bar-tab .mui-tab-item.mui-active {
+	/*color: #5cb4c4;*/
+	color: #4684a8;
+}

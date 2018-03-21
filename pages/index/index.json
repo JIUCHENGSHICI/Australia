@@ -1,0 +1,13 @@
+{
+	"isIndex": true,
+	"pageConfig": {
+		"styles": {},
+		"show": {
+			"aniShow": "none",
+			"duration": "100"
+		}
+	},
+	"request": [
+		"../../utils/echarts/echarts.js"
+	]
+}

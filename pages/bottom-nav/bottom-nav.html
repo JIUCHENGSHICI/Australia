@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<title>底部导航栏</title>
+	<script src="../../utils/origin/request.js" type="text/javascript" charset="utf-8"></script>
+</head>
+
+<body>
+	<div id="pageApp">
+		<nav class="mui-bar mui-bar-tab">
+			<a class="mui-tab-item" :class="item.checked" @tap='open(item)' href="#tabbar" v-for='(item,index) in items'>
+				<span class="mui-icon" :class="item.icon"></span>
+				<span class="mui-tab-label">{{item.title}}</span>
+			</a>
+		</nav>
+	</div>
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<title>新品推荐</title>
+	<script src="../../utils/origin/request.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>
+
+	<div id="pageApp">
+		<ul class="list">
+
+			<li v-for="(item,index) in goodList" class="list-item" @tap="goInfo(item,index)">
+
+				<div class="mui-row">
+					<div class="mui-col-xs-3 img ">
+						<img src="../../assets/img/index/index1.png" />
+					</div>
+					<div class="mui-col-xs-9 list-info-box">
+						<div class="title one-line text-gray">
+							{{item.title}}
+						</div>
+						<div class="info three-line text-gray">
+							{{item.info}}
+						</div>
+					</div>
+				</div>
+
+			</li>
+
+		</ul>
+	</div>
+
+</body>
+
+</html>

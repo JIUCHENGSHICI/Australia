@@ -1,0 +1,66 @@
+{
+	"index.html": {
+		"refer": [
+			"pages/index/index.html",
+			"pages/home/home.html",
+			"pages/nav/nav.html",
+			"pages/order/order.html",
+			"pages/orderInfo/orderInfo.html",
+			"pages/orderQuery/orderQuery.html",
+			"pages/sale-month/sale-month.html",
+			"pages/sale-brand/sale-brand.html",
+			"pages/sale-region/sale-region.html",
+			"pages/sale-rebate/sale-rebate.html",
+			"pages/newGoods/newGoods.html",
+			"pages/web-view/web-view.html",
+			"pages/system-set/system-set.html",
+			"pages/system-userSet/system-userSet.html",
+			"pages/system-collect/system-collect.html",
+			"pages/address-user/address-user.html",
+			"pages/message/message.html",
+			"pages/system-contact/system-contact.html",
+			"pages/charge/charge.html",
+			"pages/carry-profit/carry-profit.html",
+			"pages/login/login.html",
+			"pages/address-new/address-new.html",
+			"pages/system-phone/system-phone.html",
+			"pages/system-setPwd/system-setPwd.html",
+			"pages/goodsInfo/goodsInfo.html",
+			"pages/reg/reg.html",
+			"pages/ajax/ajax.html",
+			"pages/msg-list/msg-list.html",
+			"pages/bottom-nav/bottom-nav.html",
+			"pages/order-pay/order-pay.html",
+			"pages/slider/slider.html"
+		],
+		"resources": [
+			"app.json",
+			"pages/order/order.json",
+			"assets/img/all/bg.png",
+			"pages/nav/nav.json",
+			"pages/index/index.json",
+			"pages/ajax/ajax.json",
+			"pages/bottom-nav/bottom-nav.json"
+		]
+	},
+	"pages/home/home.html": {
+		"refer": [
+			"pages/index/index.html"
+		]
+	},
+	"pages/order/order.html": {
+		"resources": [
+			"pages/order/order.json"
+		]
+	},
+	"pages/ajax/ajax.html": {
+		"resources": [
+			"pages/ajax/ajax.css"
+		]
+	},
+	"pages/index/index.html": {
+		"resources": [
+			"pages/index/index.json"
+		]
+	}
+}

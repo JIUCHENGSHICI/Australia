@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>订单结算</title>
+    <script src="../../utils/origin/request.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>
+
+    <div id="pageApp">
+
+        <div class="order-goods-list">
+            <div class="order-goods-item" v-for='(item,index) in orderLists'>
+
+                <div class="mui-row">
+                    <mui class="col-xs-12">订单号：{{item.order_id}}</mui>
+                </div>
+
+                <div class="mui-row">
+                    <div class="mui-col-xs-6">收件人：{{item.order_info.address_info.people}}</div>
+                    <div class="mui-col-xs-6">订单金额：￥ {{item.money}}</div>
+                </div>
+
+            </div>
+        </div>
+        <div class="order-money">
+            订单金额
+            <span class="text-blue">￥ {{order_money}}</span>
+        </div>
+        <div class="order-pay-model">
+
+            <div class="mui-row order-pay-item order-pay-item-1">
+
+                <div class="mui-col-xs-12">
+                    <div class="mui-input-row mui-radio mui-left">
+                        <label>余额支付
+                            <span class="mui-pull-right text-blue">￥ {{order_money}}</span>
+                        </label>
+
+                        <input name="radio1" type="radio">
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="mui-row order-pay-item">
+                <div class="mui-col-xs-12">
+                    <div class="mui-input-row mui-radio mui-left">
+                        <label>支付宝</label>
+                        <input name="radio1" type="radio">
+                    </div>
+                </div>
+            </div>
+
+            <div class="mui-row order-pay-item">
+                <div class="mui-col-xs-12">
+                    <div class="mui-input-row mui-radio mui-left">
+                        <label>微信</label>
+                        <input name="radio1" type="radio">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="fixed-btn-list">
+
+            <div class="mui-row">
+                <div class="mui-col-xs-12">
+                    <div class="fixed-btn-item fixed-btn-primary" @tap='postOrder()'>提交</div>
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+
+
+</body>
+
+</html>

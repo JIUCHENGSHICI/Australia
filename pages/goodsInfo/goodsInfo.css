@@ -1,0 +1,34 @@
+body {
+	background-color: #ffffff;
+}
+/*.mui-slider-indicator .mui-indicator{
+	background: #60BCCC;
+}*/
+
+.goods-info .goods-head .goods-img {
+	width: 100%;
+	height: 300px;
+}
+
+.mui-slider-item a {
+	background: url(../../assets/img/ceshi/pig1.jpg);
+	width: 100%;
+	height: 300px;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.goods-info .goods-title {
+	display: block;
+	width: 100%;
+	font-size: 20px;
+	text-align: left;
+	color: #4A4A4A;
+	padding: 10px 10px;
+}
+
+.goods-info .goods-content {
+	font-size: 14px;
+	color: #9B9B9B;
+	padding: 10px;
+}

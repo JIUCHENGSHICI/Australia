@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>利润提现</title>
+		<script src="../../utils/origin/request.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+
+	<body>
+		<div id="pageApp">
+			<!--顶部开始-->
+			<div class="profit-top">
+				<div class="mui-row">
+					<div class="mui-col-xs-6 switch" @tap="setModel(1)">
+						<span :class="[{'text-blue':model==1}]">提现</span>
+						<div class="carry-line-box">
+							<div class="profit-line" v-if='model==1'></div>
+						</div>
+					</div>
+					<div class="mui-col-xs-6 switch" @tap="setModel(2)">
+						<span :class="[{'text-blue':model==2}]">账户信息</span>
+						<div class="carry-line-box">
+							<div class="profit-line" v-if='model==2'></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--顶部结束-->
+
+			<!--提现容器开始-->
+			<div class="record-show profit-left-content" v-if='model==1'>
+				<!--账户余额开始-->
+				<div class="balance one-line">
+					账户余额
+					<span class="balance-amount">￥{{balance}}</span>
+				</div>
+				<input v-model="profit.money" type="number" class="mui-input-clear balance-input" placeholder="请输入金额">
+				<span class="money-icon">￥</span>
+				<!--账户余额结束-->
+				<!--姓名开始-->
+				<div class="carry-name one-line">
+					姓名
+				</div>
+				<input v-model="profit.name" type="text" class="mui-input-clear balance-input" placeholder="请输入真实姓名">
+				<!--姓名结束-->
+				<!--银行账号开始-->
+				<div class="bank one-line">
+					银行账号
+				</div>
+				<!--下拉组件开始-->
+				<div class="bank-select">
+					<select name="" v-model="choice">
+						<option value="" disabled>选择提现账户</option>
+						<option v-for="(item,index) in profitInfo" :value="item.accountInfo">{{item.accountInfo}}</option>
+					</select>
+					<span class="iconfont icon-msnui-downmini bank-select-icon"></span>
+				</div>
+				<!--下拉组件结束-->
+			</div>
+
+			<!--银行账号结束-->
+			<!--提现容器结束-->
+
+			<!--账户信息容器开始-->
+			<div class="profitInfo-show profit-right-content" v-if='model==2'>
+				<ul>
+					<li v-for="(item,index) in profitInfo">
+						<div class="mui-row">
+							<div class="mui-col-xs-9 right-info">
+								<p class="info-left one-line">账号类型
+									<span class="info-right">{{item.accountType}}</span>
+								</p>
+								<p class="info-left one-line">账号姓名
+									<span class="info-right">{{item.accountName}}</span>
+								</p>
+								<p class="info-left one-line">账号信息
+									<span class="info-right">{{item.accountInfo}}</span>
+								</p>
+							</div>
+							<div class="mui-col-xs-3 right-status" v-html="item.accountStatus">
+							</div>
+						</div>
+					</li>
+				</ul>
+
+			</div>
+
+			<transition name="fade">
+
+				<div class="fixed-btn-list" v-show='model==1'>
+					<div class="mui-row">
+						<div class="mui-col-xs-6">
+							<div class="fixed-btn-item fixed-btn-info" @tap="goRecord()">提现记录</div>
+						</div>
+						<div class="mui-col-xs-6">
+							<div class="fixed-btn-item fixed-btn-primary" @tap="upLoad()">提交</div>
+						</div>
+					</div>
+				</div>
+
+			</transition>
+
+			<transition name="fade">
+
+				<div class="fixed-btn-list" v-show='model==2'>
+					<div class="mui-row">
+						<div class="mui-col-xs-12">
+							<div class="fixed-btn-item fixed-btn-primary" @tap='createNew()'>创建新账户</div>
+						</div>
+					</div>
+				</div>
+
+			</transition>
+
+			<!--账户信息容器结束-->
+		</div>
+
+	</body>
+
+</html>

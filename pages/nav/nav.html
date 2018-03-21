@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="../../utils/origin/request.js" type="text/javascript" charset="utf-8"></script>
+</head>
+
+<body>
+
+
+    <div id="pageApp">
+        <div class="close-off-canvas mui-action-back">
+            <i class="mui-icon mui-icon-closeempty close-icon "></i>
+        </div>
+        <ul class="nav-list">
+            <li class="nav-item" v-for='(item,index) in items' @tap='open(item)'>{{item.title}}</li>
+        </ul>
+
+        <div class="login-off-canvas">
+            <div class="login-icon"></div>
+        </div>
+    </div>
+
+</body>
+
+</html>

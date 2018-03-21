@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>商品详情</title>
+		<script src="../../utils/origin/request.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+
+	<body>
+		<div id="pageApp">
+			<div class="goods-info">
+				<div class="goods-head">
+					<div class="goods-img">
+						<!--轮播开始-->
+						<div class="mui-slider">
+							<div class="mui-slider-group">
+								<div class="mui-slider-item"><a href="#"></a></div>
+								<div class="mui-slider-item"><a href="#"></a></div>
+								<div class="mui-slider-item"><a href="#"></a></div>
+								<div class="mui-slider-item"><a href="#"></a></div>
+							</div>
+							<div class="mui-slider-indicator">
+								<div class="mui-indicator mui-active"></div>
+								<div class="mui-indicator"></div>
+								<div class="mui-indicator"></div>
+								<div class="mui-indicator"></div>
+							</div>
+						</div>			
+						<!--轮播结束-->
+						<my-slider></my-slider>
+					</div>
+				</div>
+				<div class="goods-title">
+					商品名称
+				</div>
+				<div class="goods-content">
+					商品的详情介绍这里可以放30个字符的空间.商品的详情介绍这里可以放30个字符的空间。商品的详情介绍这里可以放30个字符的空间。商品的详情介绍这里可以放30个字符的空间。商品的详情介绍这里可以放30个字符的空间。商品的详情介绍这里可以放30个字符的空间。商品的详情介绍这里可以放30个字符的空间。商品的详情介绍这里可以放30个字符的空间。
+					<br>
+					<br> 商品的详情介绍这里可以放30个字符的空间。商品的详情介绍这里可以放30个字符的空间。商品的详情介绍这里可以放30个字符的空间。
+				</div>
+			</div>
+			<div class="fixed-btn-list">
+				<div class="mui-row">
+					<div class="mui-col-xs-6">
+						<div class="fixed-btn-item fixed-btn-info" @tap='collect()'>收藏</div>
+					</div>
+					<div class="mui-col-xs-6">
+						<div class="fixed-btn-item fixed-btn-primary" @tap='saveOrder(false)'>添加到订单</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+
+</html>

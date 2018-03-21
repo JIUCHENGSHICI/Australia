@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>充值</title>
+		<script src="../../utils/origin/request.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+
+	<body>
+		<div id="pageApp">
+			<!--充值开始-->
+			<div class="panel1" v-if="!isShow">
+				<!--<button @tap="goRec()">充值记录</button>-->
+				<div class="charge">
+					<div class="charge-title1">充值账号</div>
+					<!--下拉组件开始-->
+					<div class="mui-row">
+						<div class="mui-col-xs-12 broder-radius-0 text-size-14">
+							<div class="charge-select">
+								<select name="" v-model="choice">
+									<option disabled value="">请选择</option>
+									<option v-for="(item,index) in accList" :value="item.accountInfo">{{item.accountInfo}}</option>
+								</select>
+								<span class="iconfont icon-butie2 charge-select-icon text-blue icon-msnui-downmini"></span>
+
+							</div>
+
+							<div class="charge-title2">充值金额</div>
+							<input v-model.number.trim="money" type="number" class="mui-input-clear" placeholder="请输入金额">
+
+						</div>
+					</div>
+
+				</div>
+
+				<div class="fixed-btn-list">
+					<div class="mui-row">
+						<div class="mui-col-xs-12">
+							<div class="fixed-btn-item fixed-btn-primary" @tap='next()'>下一步</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--充值结束-->
+
+			<!--充值记录开始-->
+
+			<div class="panel2" v-if="isShow" id="panel2">
+				<!--<button @tap="goBack()">返回</button>-->
+				<div class="record">
+					<ul>
+						<li v-for="(item,index) in chargeRec">
+							<p class="one-line">充值账户：
+								<sapn class="record-right record-account">{{item.account}}</sapn>
+							</p>
+							<p class="one-line">充值时间：
+								<sapn class="record-right record-time">{{item.time}}</sapn>
+							</p>
+							<p class="one-line">充值金额：
+								<sapn class="record-right record-money">￥{{item.money}}</sapn>
+							</p>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			<!--充值记录结束-->
+		</div>
+
+	</body>
+
+</html>

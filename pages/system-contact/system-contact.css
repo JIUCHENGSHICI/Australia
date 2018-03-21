@@ -1,0 +1,44 @@
+body{
+	background: #fff;
+}
+.contact{
+	margin-top: 20px;
+	padding: 0 20px;
+}
+/*问题反馈字体*/
+.feedback{
+	color: #4A4A4A;
+	font-size: 14px;
+}
+
+/*文本框的样式*/
+.feedback-text{
+	margin-top: 10px;
+}
+.text-color{
+	border: 1px solid #BFBFBF;
+	border-radius: 0;
+}
+.mui-popover.mui-popover-action .mui-table-view .contact-tel{
+	color: #1B65A3;
+	font-size: 20px;
+}
+.mui-popover.mui-popover-action .mui-table-view .mui-table-view-cell:after{
+	content: none;
+}
+.mui-popover.mui-popover-action .mui-table-view .contact-cancel{
+	color: #FF2D55;
+	font-size: 14px;
+}
+.mui-popover.mui-popover-action .mui-table-view{
+	border-radius: 15px;
+	background: #fff;
+	margin-bottom: 12px;
+}
+.text-color{
+	margin-bottom: 0;
+}
+.text-right{
+	color: #A4A4A4;
+	font-size: 14px;
+}

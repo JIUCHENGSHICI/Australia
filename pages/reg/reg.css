@@ -1,0 +1,100 @@
+#reg {
+	position: relative;
+	width: 100%;
+	height: 100vh;
+}
+
+.panel-body-top-reg {
+	position: absolute;
+	padding: 0 20px;
+	top: 20px;
+	text-align: center;
+	width: 100%;
+	top: 100px;
+}
+
+.info-12 {
+	height: 60px;
+	line-height: 60px;
+}
+
+.agree {
+	border-bottom: none;
+	line-height: 60px;
+	text-align: left;
+}
+
+.checkbox-box input[type=checkbox] {
+	left: 0;
+	text-align: center;
+}
+
+.checkbox-box-cube {
+	display: inline-block;
+	text-align: center;
+	/*background: red;*/
+	top: 4px;
+}
+
+.agree-font {
+	color: #bbb7b4;
+	margin-left: 5px;
+}
+
+.agree-font a {
+	color: #bbb7b4;
+	margin-left: 5px;
+}
+
+.mui-btn-next {
+	color: #fff;
+	border-color: #2b7fa6;
+	font-size: 14px;
+	background: #2b7fa6;
+}
+
+.mui-btn-next:enabled:active {
+	color: #fff;
+	border-color: #2b7fa6;
+	font-size: 14px;
+	background: #2b7fa6;
+}
+
+
+/*复选框的样式*/
+
+.checkbox-box.checkbox-box-cube input[type=checkbox]:before,
+.checkbox-box.checkbox-box-cube input[type=checkbox]:after {
+	font-family: "iconfont" !important;
+	font-size: 25px;
+	line-height: 1;
+}
+
+
+/*还没选中的颜色*/
+
+.mui-checkbox input[type=checkbox]:before,
+.mui-radio input[type=radio]:before {
+	color: #DEDEDE;
+}
+
+
+/*选中的颜色改变*/
+
+.checkbox-box input[type=checkbox]:checked:before,
+.checkbox-box input[type=checkbox]:checked:after {
+	color: #60bccc;
+}
+
+.login-select {
+	position: relative;
+	background: red;
+}
+
+.login-select-icon {
+	position: absolute;
+	right: 0;
+	top: 0;
+	font-size: 20px;
+	color: #5bb6c2;
+}

@@ -1,0 +1,25 @@
+body {
+    background-color: #ffffff;
+}
+
+.goods-info {
+    padding: 10px;
+    .goods-head {
+        .goods-img {
+            width: 100%;
+            height: 300px;
+            background: #F2F2F2;
+        }
+    }
+    .goods-title {
+        display: block;
+        width: 100%;
+        font-size: 20px;
+        text-align: left;
+        padding: 10px 0;
+    }
+    .goods-content {
+        font-size: 14px;
+        color: #9B9B9B;
+    }
+}

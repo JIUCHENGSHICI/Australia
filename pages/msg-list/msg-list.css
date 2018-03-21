@@ -1,0 +1,25 @@
+.list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    font-size: 14px;
+}
+
+.list .list-item {
+    padding: 10px 5px;
+    border-bottom: solid 1px #ddd;
+}
+
+.list .list-item .img {
+    line-height: 80px;
+}
+
+.list .list-item .img img {
+    width: 70px;
+    height: 70px;
+    vertical-align: middle;
+}
+
+.list-info-box .title {
+    font-size: 15px;
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>启动页面</title>
+		<script src="../../utils/origin/request.js" type="text/javascript" charset="utf-8"></script>
+
+	</head>
+
+	<body>
+		<div id="pageApp">
+			<!--顶部的logo开始-->
+			<div class="home-panel">
+
+				<div class="home-head">
+					<img src="../../assets/img/index/home-logo.png" />
+				</div>
+				<!--顶部的logo结束-->
+				<div class="login-mode">
+					<!--现有账号登录   开始-->
+					<button @tap="goLogin()" type="button" class="mui-btn mui-btn-block mui-btn-outlined bc-white text-blue">现有账号登录</button>
+					<!--现有账号登录   结束-->
+					<!--创建账户  开始-->
+					<button @tap="goCreate()" type="button" class="mui-btn mui-btn-block mui-btn-white mui-btn-outlined">创建账户</button>
+					<!--创建账户  结束-->
+					<!--其他方式登录  开始-->
+					<div class="other">
+						<div class="mui-row">
+							<div class="mui-col-xs-4 other-4-one">
+								<div class="line"></div>
+							</div>
+							<div class="mui-col-xs-4 other-4-two">
+								其他方式登录
+							</div>
+							<div class="mui-col-xs-4 other-4-three">
+								<div class="line"></div>
+							</div>
+						</div>
+					</div>
+					<!--其他方式登录  结束-->
+					<!--微信授权登录  开始-->
+					<button @tap="goWx()" type="button" class="mui-btn mui-btn-block mui-btn-white mui-btn-outlined">
+						<span class="mui-icon mui-icon-weixin"></span>微信授权登陆
+					</button>
+					<!--微信授权登录  结束-->
+				</div>
+			</div>
+		</div>
+
+	</body>
+
+</html>

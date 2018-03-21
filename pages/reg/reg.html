@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>注册</title>
+
+		<script src="../../utils/origin/request.js" type="text/javascript" charset="utf-8"></script>
+
+	</head>
+
+	<body>
+
+		<div id="pageApp">
+			<div class="panel panel-top">
+				<!--组件2开始-->
+				<div class="panel-body panel-body-top-reg">
+					<!--手机号码开始-->
+					<div class="info-box info-box-status1">
+						<div class="mui-row">
+							<div class="mui-col-xs-1 info-1">
+								<span class="iconfont icon-yonghu tel-head-icon"></span>
+							</div>
+							<!--<div class="mui-col-xs-3 info-3">
+							<div class="tc">
+								<div class="tel-select text-select">
+									<select name="" v-model="choice">
+										<option v-for="(item,index) in areaCode" :value="item.value">{{item.text}}</option>
+									</select>
+								</div>
+							</div>
+						</div>-->
+							<div class="mui-col-xs-3 text-select info-3">
+								<select name="" v-model='choice'>
+									<option :value="item.value" v-for='(item,index) in areaCode'>{{item.text}}</option>
+								</select>
+								<span class="iconfont icon-msnui-downmini login-select-icon"></span>
+							</div>
+							<div class="mui-col-xs-8 info-8">
+								<input type="number" v-model="phone" class="mui-input-clear no-border" placeholder="手机号码">
+							</div>
+						</div>
+					</div>
+					<!--手机号码结束-->
+					<!--密码开始-->
+					<div class="info-box info-box-status1">
+						<div class="mui-row">
+							<div class="mui-col-xs-1 info-1">
+								<img src="../../assets/img/login/shut.png" class="lock" />
+							</div>
+							<div class="mui-col-xs-5 info-6">
+								<input type="number" v-model="code" class="mui-input-clear no-border " placeholder="验证码">
+							</div>
+							<div class="mui-col-xs-6 info-5">
+								<button type="button" @tap="getCode" :disabled='isGetCode' class="mui-btn mui-btn-block mui-btn-obtain mui-btn-outlined">{{gain}} {{timeCount}}{{retransmission}}</button>
+							</div>
+						</div>
+					</div>
+					<!--密码结束-->
+					<!--邀请码开始-->
+					<div class="info-box">
+						<div class="mui-row">
+							<div class="mui-col-xs-12 info-12">
+								<form class="">
+									<input type="text" v-model="invitation" class="mui-input-clear no-border code" placeholder="邀请码">
+								</form>
+							</div>
+						</div>
+					</div>
+					<!--邀请码结束-->
+					<!--协议开始-->
+					<div class="info-box agree">
+						<label>
+							<div class="mui-checkbox checkbox-box checkbox-box-cube">
+								<input name="checkbox1" v-model="isProtocol" class="fa fa-check-square" value="Item 1" type="checkbox">
+							</div>
+							<span class="agree-font">我同意
+							<a href="#" @tap.stop="showProtocol()">《用户协议》</a>
+						</span>
+						</label>
+					</div>
+					<!--协议结束-->
+					<div class="text-red text-center font-14">{{info}}</div>
+					<button type="button" @tap="next" class="mui-btn mui-btn-block mui-btn-primary" :disabled='disabled'>下一步</button>
+
+				</div>
+				<!--组件2结束-->
+			</div>
+		</div>
+
+	</body>
+
+</html>

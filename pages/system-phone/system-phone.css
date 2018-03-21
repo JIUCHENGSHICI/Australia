@@ -1,0 +1,51 @@
+.phone{
+	margin-top: 30px;
+	padding: 0 20px;
+}
+.phone-title1{
+	font-size: 14px;
+	color: #4A4A4A;
+}
+.phone-title2{
+	margin-top: 20px;
+	margin-bottom: 10px;
+	font-size: 14px;
+	color: #4A4A4A;
+}
+.phone-title3{
+	font-size: 14px;
+	color: #4A4A4A;
+	margin-top: 20px;
+	margin-bottom: 10px;
+}
+.question-font{
+	font-size: 13px;
+	color: #82D7D1;
+	padding-left: 8px;
+	margin-top: 10px;
+	margin-bottom: 5px;
+}
+.answer-font{
+	font-size: 13px;
+	color: #82D7D1;
+	margin-top: 10px;
+	margin-bottom: 5px;
+}
+input[type=text]{
+    border: 1px solid #BFBFBF;
+    border-radius: 0;
+    height: 35px;
+}
+ ::-webkit-input-placeholder {
+ 	font-size: 14px;
+}
+.new-phone{
+	position: relative;
+}
+.phone-right{
+	position: absolute;
+	top: 8px;
+	right: 10px;
+	color: #82D7D1;
+	font-size: 14px;
+}

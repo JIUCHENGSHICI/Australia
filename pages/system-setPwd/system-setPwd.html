@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>设置密码</title>
+		<script src="../../utils/origin/request.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+
+	<body>
+
+		<div id="pageApp" class="set-pwd">
+			<div class="panel panel-top">
+				<!--组件2开始-->
+				<div class="panel-body panel-body-top-reg">
+					<!--第一次密码开始-->
+					<div class="info-box info-box-status1">
+						<div class="mui-row">
+							<div class="mui-col-xs-1 info-1">
+								<!-- <span class="iconfont icon-butie2 tel-head-icon"></span> -->
+								<img src="../../assets/img/login/open.png" class="lock" />
+							</div>
+							<div class="mui-col-xs-11 info-11">
+								<input v-model="set.passWord1" type="password" class="mui-input-clear no-border" placeholder="请输入6-16位密码">
+							</div>
+						</div>
+					</div>
+					<!--第一次密码结束-->
+					<!--第2次密码开始-->
+					<div class="info-box info-box-status1">
+						<div class="mui-row">
+							<div class="mui-col-xs-1 info-1">
+								<!-- <span class="iconfont icon-butie2 tel-head-icon"></span> -->
+								<img src="../../assets/img/login/shut.png" class="lock" />
+							</div>
+							<div class="mui-col-xs-11 info-11">
+								<input v-model="set.passWord2" type="password" class="mui-input-clear no-border" placeholder="确认密码">
+							</div>
+						</div>
+					</div>
+					<!--第2次密码结束-->
+					<button @tap="login()" style="margin-top: 20px;" type="button" class="mui-btn mui-btn-block mui-btn-primary ">确认</button>
+					<div class="text-red text-center">{{info}}</div>
+				</div>
+				<!--组件2结束-->
+			</div>
+		</div>
+
+	</body>
+
+</html>

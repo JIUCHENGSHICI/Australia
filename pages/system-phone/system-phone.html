@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>修改手机</title>
+		<script src="../../utils/origin/request.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+
+	<body>
+		<div id="pageApp">
+			<div class="phone">
+				<div class="phone-title1">回答安全问题</div>
+				<div class="mui-row">
+					<div class="mui-col-xs-3">
+						<div class="question-font">问题1：</div>
+					</div>
+					<div class="mui-col-xs-9">
+						<div class="answer-font overflow-auto">
+							{{question.question1}}
+						</div>
+					</div>
+				</div>
+
+				<input type="text" v-model="phone.password1" class="mui-input-clear" placeholder="请输入答案">
+				<div class="mui-row">
+					<div class="mui-col-xs-3">
+						<div class="question-font">问题2：</div>
+					</div>
+					<div class="mui-col-xs-9">
+						<div class="answer-font overflow-auto">
+							{{question.question2}}
+						</div>
+					</div>
+				</div>
+				<input type="text" v-model="phone.password2" class="mui-input-clear" placeholder="请输入答案">
+				<div class="phone-title2">输入新手机</div>
+				<form class="new-phone">
+					<input type="number" v-model="phone.tel" class="mui-input-clear" placeholder="请输入新手机号">
+					<span class="phone-right" @tap="getCode()">{{obtain}}{{timeCount}}{{retransmission}}</span>
+				</form>
+				<div class="phone-title3">输入验证码</div>
+				<input type="number" v-model="phone.code" class="mui-input-clear" placeholder="请输入验证码">
+			</div>
+
+			<div class="fixed-btn-list">
+				<div class="mui-row">
+					<div class="mui-col-xs-12">
+						<div class="fixed-btn-item fixed-btn-primary" @tap='postInfo()'>确认修改</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</body>
+
+</html>

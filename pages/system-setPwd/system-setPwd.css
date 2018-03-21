@@ -1,0 +1,26 @@
+*{
+	font-size: 14px;
+}
+
+.set-pwd {
+	margin-top: 100px;
+	padding: 0 20px;
+	width: 100%;
+}
+
+
+/*最下边的按钮*/
+
+.mui-btn-set-pwd {
+	margin-top: 100px;
+}
+
+.mui-btn-set-pwd:enabled:active {
+	color: #fff;
+	border-color: #2b7fa6;
+	font-size: 14px;
+	background: #2b7fa6;
+}
+
+
+
